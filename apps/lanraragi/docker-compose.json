@@ -1,0 +1,25 @@
+{
+    "$schema": "../dynamic-compose-schema.json",
+    "services": [
+        {
+            "image": "difegue/lanraragi:v.0.9.50",
+            "internalPort": 3000,
+            "isMain": true,
+            "name": "lanraragi",
+            "volumes": [
+                {
+                    "hostPath": "${ROOT_FOLDER_HOST}/media/hentai",
+                    "containerPath": "/home/koyomi/lanraragi/content"
+                },
+                {
+                    "hostPath": "${APP_DATA_DIR}/data/thumb",
+                    "containerPath": "/home/koyomi/lanraragi/thumb"
+                },
+                {
+                    "hostPath": "${APP_DATA_DIR}/data/database",
+                    "containerPath": "/home/koyomi/lanraragi/database"
+                }
+            ]
+        }
+    ]
+}
