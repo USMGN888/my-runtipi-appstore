@@ -1,0 +1,33 @@
+{
+    "$schema": "../dynamic-compose-schema.json",
+    "services": [
+        {
+            "image": "atsumerudev/atsumeru:1.1",
+            "internalPort": 31337,
+            "isMain": true,
+            "name": "atsumeru",
+            "volumes": [
+                {
+                    "hostPath": "${ROOT_FOLDER_HOST}/media/library",
+                    "containerPath": "/library"
+                },
+                {
+                    "hostPath": "${APP_DATA_DIR}/data/config",
+                    "containerPath": "/app/config"
+                },
+                {
+                    "hostPath": "${APP_DATA_DIR}/data/database",
+                    "containerPath": "/app/database"
+                },
+                {
+                    "hostPath": "${APP_DATA_DIR}/data/cache",
+                    "containerPath": "/app/cache"
+                },
+                {
+                    "hostPath": "${APP_DATA_DIR}/data/logs",
+                    "containerPath": "/app/logs"
+                }
+            ]
+        }
+    ]
+}

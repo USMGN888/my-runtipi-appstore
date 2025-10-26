@@ -1,0 +1,20 @@
+{
+  "$schema": "../app-info-schema.json",
+  "name": "Atsumeru",
+  "port": 31337,
+  "available": true,
+  "exposable": true,
+  "dynamic_config": true,
+  "id": "atsumeru",
+  "tipi_version": 1,
+  "version": "1.1",
+  "categories": ["media","books"],
+  "description": "Free self-hosted mangas/comics/light novels media server",
+  "short_desc": "Free self-hosted mangas/comics/light novels media server",
+  "author": "atsumerudev",
+  "source": "https://github.com/Atsumeru-xyz/Atsumeru",
+  "form_fields": [],
+  "supported_architectures": ["arm64", "amd64"],
+  "created_at": 1737086000000,
+  "updated_at": 1737086000000
+}
