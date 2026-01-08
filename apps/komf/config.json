@@ -1,0 +1,46 @@
+{
+  "$schema": "../app-info-schema.json",
+  "name": "komf",
+  "port": 9202,
+  "available": true,
+  "exposable": true,
+  "dynamic_config": true,
+  "id": "komf",
+  "tipi_version": 1,
+  "version": "1.7.1",
+  "categories": ["media"],
+  "description": "Web application for archival and reading of manga/doujinshi. Lightweight and Docker-ready for NAS/servers.",
+  "short_desc": "Web application for archival and reading of manga/doujinshi.",
+  "author": "sndxr",
+  "source": "https://github.com/Snd-R/komf",
+  "form_fields": [
+    {
+      "type": "text",
+      "label": "Komga Base URI",
+      "env_variable": "KOMF_KOMGA_BASE_URI"
+    },
+    {
+      "type": "text",
+      "label": "Komga User",
+      "env_variable": "KOMF_KOMGA_USER"
+    },
+    {
+      "type": "password",
+      "label": "Komga Password",
+      "env_variable": "KOMF_KOMGA_PASSWORD"
+    },
+    {
+      "type": "text",
+      "label": "Kavita Base URI",
+      "env_variable": "KOMF_KAVITA_BASE_URI"
+    },
+    {
+      "type": "password",
+      "label": "Kavita API Key",
+      "env_variable": "KOMF_KAVITA_API_KEY"
+    }
+  ],
+  "supported_architectures": ["arm64", "amd64"],
+  "created_at": 1691943801422,
+  "updated_at": 1734908651396
+}

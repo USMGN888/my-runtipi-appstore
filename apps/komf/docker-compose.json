@@ -1,0 +1,25 @@
+{
+    "$schema": "../dynamic-compose-schema.json",
+    "services": [
+        {
+            "image": "sndxr/komf:1.7.1",
+            "internalPort": 8085,
+            "isMain": true,
+            "name": "komf",
+            "volumes": [
+                {
+                    "hostPath": "${APP_DATA_DIR}/config",
+                    "containerPath": "/config"
+                }
+            ],
+            "environment": {
+                "KOMF_KOMGA_BASE_URI": "${KOMF_KOMGA_BASE_URI}",
+                "KOMF_KOMGA_USER": "${KOMF_KOMGA_USER}",
+                "KOMF_KOMGA_PASSWORD": "${KOMF_KOMGA_PASSWORD}",
+                "KOMF_KAVITA_BASE_URI": "${KOMF_KAVITA_BASE_URI}",
+                "KOMF_KAVITA_API_KEY": "${KOMF_KAVITA_API_KEY}",
+                "KOMF_LOG_LEVEL": "INFO"
+            }
+        }
+    ]
+}
