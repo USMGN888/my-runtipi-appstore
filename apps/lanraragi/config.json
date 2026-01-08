@@ -7,7 +7,7 @@
   "dynamic_config": true,
   "id": "lanraragi",
   "tipi_version": 1,
-  "version": "0.9.5",
+  "version": "0.9.60",
   "categories": ["media"],
   "description": "Web application for archival and reading of manga/doujinshi. Lightweight and Docker-ready for NAS/servers.",
   "short_desc": "Web application for archival and reading of manga/doujinshi.",
