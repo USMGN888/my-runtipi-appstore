@@ -2,7 +2,7 @@
     "$schema": "../dynamic-compose-schema.json",
     "services": [
         {
-            "image": "difegue/lanraragi:v.0.9.50",
+            "image": "difegue/lanraragi:v.0.9.60",
             "internalPort": 3000,
             "isMain": true,
             "name": "lanraragi",
