@@ -16,7 +16,10 @@ services:
       - DB_PASSWORD=${AP_POSTGRES_PASSWORD}
       - DB_PORT=5432
     ports:
-      - "8000:8000"
+      - "8000:8000/tcp"
+    x-runtipi:
+      is_main: true
+      internal_port: 8000
 
   db:
     image: postgres:16-alpine
