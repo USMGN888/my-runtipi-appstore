@@ -7,14 +7,14 @@
   "dynamic_config": true,
   "id": "lanraragi",
   "tipi_version": 1,
-  "version": "0.9.60",
+  "version": "v.0.9.70",
   "categories": ["media"],
   "description": "Web application for archival and reading of manga/doujinshi. Lightweight and Docker-ready for NAS/servers.",
   "short_desc": "Web application for archival and reading of manga/doujinshi.",
   "author": "Difegue",
   "source": "https://github.com/Difegue/LANraragi",
   "form_fields": [],
-  "supported_architectures": ["arm64", "amd64"],
-  "created_at": 1691943801422,
-  "updated_at": 1734908651396
+  "supported_architectures": ["amd64"],
+  "created_at": 1734908651396,
+  "updated_at": 1776233903273
 }

@@ -1,0 +1,29 @@
+{
+  "name": "Yamtrack",
+  "id": "yamtrack",
+  "available": true,
+  "short_desc": "A self hosted media tracker for movies, tv shows, anime, manga, video games and books.",
+  "author": "FuzzyGrim",
+  "port": 7242,
+  "categories": [
+    "media"
+  ],
+  "description": "A self hosted media tracker for movies, tv shows, anime, manga, video games and books.",
+  "tipi_version": 2,
+  "version": "v0.25.2",
+  "source": "https://github.com/FuzzyGrim/Yamtrack",
+  "exposable": true,
+  "supported_architectures": [
+    "amd64"
+  ],
+  "created_at": 1776233903273,
+  "updated_at": 1776233903273,
+  "dynamic_config": true,
+  "form_fields": [
+    {
+      "type": "password",
+      "label": "PostgreSQL Password",
+      "required": true,
+      "env_variable": "AP_POSTGRES_PASSWORD"
+    }]
+}
