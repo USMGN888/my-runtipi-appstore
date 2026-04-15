@@ -23,26 +23,23 @@
   "generate_vapid_keys": false,
   "https": false,
   "supported_architectures": [
-    "amd64",
-    "arm64"
+    "amd64"
   ],
   "min_tipi_version": "4.5.0",
   "force_pull": false,
   "form_fields": [
     {
-      "type": "random",
+      "type": "password",
       "label": "Secret Key",
       "required": true,
-      "env_variable": "SECRET",
-      "min": 32,
-      "encoding": "hex"
+      "env_variable": "SECRET"
     },
     {
       "type": "text",
       "label": "TMDB Language",
       "required": true,
       "env_variable": "TMDB_LANG",
-      "default": "pt-BR",
+      "default": "ja-JP",
       "hint": "Language code for TMDB API requests (e.g., pt-BR, en-US)"
     }
   ],

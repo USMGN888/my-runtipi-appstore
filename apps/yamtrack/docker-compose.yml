@@ -1,15 +1,20 @@
 services:
   yamtrack:
     image: ghcr.io/fuzzygrim/yamtrack:0.25.1
-    volumes:
-      - ${APP_DATA_DIR}/data/db:/yamtrack/db
     environment:
       - TZ=${TZ}
       - SECRET=${SECRET}
       - REDIS_URL=redis://redis:6379
+      - DB_HOST=db
+      - DB_NAME=yamtrack
+      - DB_USER=yamtrack
+      - DB_PASSWORD=${SECRET}
+      - DB_PORT=5432
       - TMDB_LANG=${TMDB_LANG}
     depends_on:
       redis:
+        condition: service_healthy
+      db:
         condition: service_healthy
     x-runtipi:
       is_main: true
@@ -25,5 +30,20 @@ services:
       timeout: 5s
       retries: 5
 
+  db:
+    image: postgres:16-alpine
+    volumes:
+      - ${APP_DATA_DIR}/data/db:/var/lib/postgresql/data
+    healthcheck:
+      test:
+        - CMD
+        - pg_isready
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    environment:
+      - POSTGRES_DB=yamtrack
+      - POSTGRES_USER=yamtrack
+      - POSTGRES_PASSWORD=${SECRET}
 x-runtipi:
   schema_version: 2
