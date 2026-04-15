@@ -3,18 +3,18 @@
   "id": "yamtrack",
   "available": true,
   "deprecated": false,
-  "port": 8000,
+  "port": 8860,
   "name": "Yamtrack",
   "description": "Yamtrack is a self hosted media tracker for movies, tv shows, anime, manga, video games and books.",
   "short_desc": "Yamtrack is a self hosted media tracker for movies, tv shows, anime, manga, video games and books.",
   "author": "FuzzyGrimm",
-  "website": "",
+  "website": "https://github.com/FuzzyGrim/Yamtrack",
   "categories": [
     "media",
     "utilities"
   ],
-  "version": "dev",
-  "tipi_version": 4,
+  "version": "0.25.1",
+  "tipi_version": 7,
   "source": "https://github.com/FuzzyGrim/Yamtrack",
   "exposable": true,
   "no_gui": false,
@@ -28,7 +28,25 @@
   ],
   "min_tipi_version": "4.5.0",
   "force_pull": false,
-  "form_fields": [],
-  "created_at": 1748439117,
-  "updated_at": 1748439118
+  "form_fields": [
+    {
+      "type": "random",
+      "label": "Secret Key",
+      "required": true,
+      "env_variable": "SECRET",
+      "min": 32,
+      "encoding": "hex"
+    },
+    {
+      "type": "text",
+      "label": "TMDB Language",
+      "required": true,
+      "env_variable": "TMDB_LANG",
+      "default": "pt-BR",
+      "hint": "Language code for TMDB API requests (e.g., pt-BR, en-US)"
+    }
+  ],
+  "created_at": 1735329600000,
+  "updated_at": 1776139857072,
+  "urn": "tipi://yamtrack"
 }
