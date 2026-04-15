@@ -41,6 +41,13 @@
       "env_variable": "TMDB_LANG",
       "default": "ja-JP",
       "hint": "Language code for TMDB API requests (e.g., pt-BR, en-US)"
+    },
+    {
+      "type": "TIMEZONE",
+      "label": "TIMEZONE",
+      "required": true,
+      "env_variable": "TIMEZONE",
+      "default": "Asia/Seoul"
     }
   ],
   "created_at": 1735329600000,
