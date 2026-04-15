@@ -43,7 +43,7 @@
       "hint": "Language code for TMDB API requests (e.g., pt-BR, en-US)"
     },
     {
-      "type": "TIMEZONE",
+      "type": "text",
       "label": "TIMEZONE",
       "required": true,
       "env_variable": "TIMEZONE",
