@@ -46,6 +46,7 @@ services:
       - POSTGRES_DB=yamtrack
       - POSTGRES_USER=yamtrack
       - POSTGRES_PASSWORD=${SECRET}
+      - POSTGRES_HOST_AUTH_METHOD=trust
     x-runtipi:
       add_to_main_network: true
 x-runtipi:
