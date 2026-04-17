@@ -1,0 +1,40 @@
+{
+  "$schema": "https://schemas.runtipi.io/v2/app-info.json",
+  "id": "ryot",
+  "available": true,
+  "deprecated": false,
+  "port": 12788,
+  "name": "Ryot",
+  "description": "A self hosted platform for tracking various facets of your life - media, fitness and more.",
+  "short_desc": "A self hosted platform for tracking various facets of your life - media, fitness and more.",
+  "author": "Ignisda",
+  "website": "https://ryot.io/",
+  "categories": [
+    "media",
+    "utilities"
+  ],
+  "version": "0.25.1",
+  "tipi_version": 7,
+  "source": "https://github.com/ignisda/ryot",
+  "exposable": true,
+  "no_gui": false,
+  "dynamic_config": true,
+  "force_expose": false,
+  "generate_vapid_keys": false,
+  "https": false,
+  "supported_architectures": [
+    "amd64"
+  ],
+  "min_tipi_version": "4.5.0",
+  "force_pull": false,
+  "form_fields": [
+    {
+      "type": "password",
+      "label": "Secret Key",
+      "required": true,
+      "env_variable": "SECRET"
+    }
+  ],
+  "created_at": 1735329600000,
+  "updated_at": 1776139857072
+}
