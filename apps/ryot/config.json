@@ -13,7 +13,7 @@
     "media",
     "utilities"
   ],
-  "version": "0.25.1",
+  "version": "v10.3.0",
   "tipi_version": 7,
   "source": "https://github.com/ignisda/ryot",
   "exposable": true,
@@ -32,15 +32,15 @@
       "type": "password",
       "label": "Secret Key",
       "required": true,
-      "env_variable": "SECRET"
+      "env_variable": "RYOT_DB_PASSWORD"
     },
     {
       "type": "random",
-      "label": "SERVER_ADMIN_ACCESS_TOKEN",
+      "label": "RYOT_ADMIN_TOKEN",
       "max": 32,
       "min": 32,
       "required": true,
-      "env_variable": "SERVER_ADMIN_ACCESS_TOKEN"
+      "env_variable": "RYOT_ADMIN_TOKEN"
     }
   ],
   "created_at": 1735329600000,

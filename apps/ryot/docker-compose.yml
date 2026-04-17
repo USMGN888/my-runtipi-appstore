@@ -1,32 +1,31 @@
 services:
   ryot:
     image: ignisda/ryot:v10
+    restart: unless-stopped
     environment:
-      - SERVER_ADMIN_ACCESS_TOKEN=${SERVER_ADMIN_ACCESS_TOKEN}
-      - DATABASE_URL=postgres://postgres:postgres@ryot-db:5432/postgres
+      - SERVER_ADMIN_ACCESS_TOKEN=${RYOT_ADMIN_TOKEN}
+      - DATABASE_URL=postgres://postgres:${RYOT_DB_PASSWORD}@ryot-db:5432/postgres
     depends_on:
-      db:
+      ryot-db:
         condition: service_healthy
     x-runtipi:
       is_main: true
       internal_port: 8000
 
   ryot-db:
-    image: postgres:18-alpine
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      - POSTGRES_PASSWORD=${RYOT_DB_PASSWORD}
     volumes:
-      - ${APP_DATA_DIR}/data/db:/var/lib/postgresql
+      - ${APP_DATA_DIR}/db:/var/lib/postgresql/data
     healthcheck:
-      test:
-        - CMD
-        - pg_isready
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
       interval: 10s
       timeout: 5s
       retries: 5
-    environment:
-      - POSTGRES_DB=postgres
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=${SECRET}
     x-runtipi:
       add_to_main_network: true
+
 x-runtipi:
   schema_version: 2
