@@ -18,7 +18,7 @@ services:
       db:
         condition: service_healthy
     volumes:
-      - ${APP_DATA_DIR}/data/templates:/templates
+      - ${APP_DATA_DIR}/data/templates:/yamtrack/templates
     x-runtipi:
       is_main: true
       internal_port: 8000
