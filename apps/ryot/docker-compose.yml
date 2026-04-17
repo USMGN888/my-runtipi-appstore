@@ -1,6 +1,4 @@
 services:
-  yamtrack:
-
   ryot:
     image: ignisda/ryot:v10
     environment:
