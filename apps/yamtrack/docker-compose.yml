@@ -1,6 +1,6 @@
 services:
   yamtrack:
-    image: ghcr.io/FuzzyGrim/yamtrack:latest
+    image: ghcr.io/fuzzygrim/yamtrack
     environment:
       - TZ=${TIMEZONE}
       - SECRET=${SECRET}
