@@ -1,0 +1,20 @@
+{
+  "$schema": "../app-info-schema.json",
+  "name": "lancommander",
+  "port": 8572,
+  "available": true,
+  "exposable": true,
+  "dynamic_config": true,
+  "id": "lancommander",
+  "tipi_version": 55,
+  "version": "latest",
+  "categories": ["gaming"],
+  "description": "LANCommander is an open-source, self-hostable digital game platform.",
+  "short_desc": "LANCommander is an open-source, self-hostable digital game platform.",
+  "author": "lancommander",
+  "source": "https://github.com/LANCommander/LANCommander",
+  "form_fields": [],
+  "supported_architectures": ["amd64"],
+  "created_at": 1734908651396,
+  "updated_at": 1776233903273
+}
